@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<h2>My favorate hero is {{myHero.name}}</h2>
+<p>Heroes:</p>
+<ul>
+    <li *ngFor="let hero of heroes">
+        {{hero.name}}
+    </li>
+</ul>
+<p *ngIf="heroes.length > 3">There are many heroes!</p>
+
+<div>
+  <label>name: </label>
+  <input [(ngModel)]="myHero.name" placeholder="name">
+  <p>Hero name is: {{myHero.name}}</p>
+</div>
